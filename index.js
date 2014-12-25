@@ -12,3 +12,11 @@
  */
 
 'use strict';
+
+var meeting = require('./lib/');
+
+module.exports = function initialize () {
+    return {
+        attend : meeting.attend.bind(meeting)
+    };
+};
