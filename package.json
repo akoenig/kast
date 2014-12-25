@@ -1,0 +1,28 @@
+{
+  "name": "meeting",
+  "version": "1.0.0",
+  "description": "A simple name resolution layer for local networks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:akoenig/meeting"
+  },
+  "keywords": [
+    "dns",
+    "zeroconf"
+  ],
+  "author": "André König <akoenig@posteo.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akoenig/meeting/issues"
+  },
+  "homepage": "https://github.com/akoenig/meeting",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "run-sequence": "^1.0.2"
+  }
+}
