@@ -28,6 +28,7 @@
   "dependencies": {
     "ip": "^0.3.2",
     "mandatory": "^1.0.0",
-    "verror": "^1.6.0"
+    "verror": "^1.6.0",
+    "kast": "./lib/kast"
   }
 }
