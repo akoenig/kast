@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/akoenig/kast",
   "dependencies": {
+    "debug": "^2.1.0",
     "ip": "^0.3.2",
     "mandatory": "^1.0.0",
     "verror": "^1.6.0"
