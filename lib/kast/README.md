@@ -1,6 +1,6 @@
 # kast
 
-An udp multicast rpc framework.
+An UDP multicast rpc framework.
 
 ## Author
 
