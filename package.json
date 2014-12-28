@@ -1,7 +1,7 @@
 {
   "name": "kast",
   "version": "1.0.0-alpha1",
-  "description": "An udp multicast rpc framework.",
+  "description": "An UDP multicast RPC framework.",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
