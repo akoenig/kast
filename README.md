@@ -39,6 +39,8 @@ server.listen(5000);
 ### Client
 
 ```javascript
+var kast = require('kast');
+
 kast.broadcast({
     port: 5000,
     command: '/alive',
@@ -50,10 +52,10 @@ kast.broadcast({
 Output
 
 ```javascript
-    {
-        '10.0.0.1': 'Host A is alive!',
-        '10.0.0.9': 'Host B is alive!'
-    }
+{
+    '10.0.0.1': 'Host A is alive!',
+    '10.0.0.9': 'Host B is alive!'
+}
 ```
 
 ## Advanced example
