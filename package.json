@@ -1,34 +1,29 @@
 {
-  "name": "meeting",
+  "name": "kast",
   "version": "1.0.0",
-  "description": "A simple name resolution layer for local networks.",
+  "description": "An udp multicast rpc framework.",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:akoenig/meeting"
+    "url": "git@github.com:akoenig/kast.git"
   },
   "keywords": [
-    "dns",
-    "zeroconf"
+    "rpc",
+    "multicast"
   ],
-  "author": "André König <akoenig@posteo.de>",
+  "author": "André König <andre.koenig@posteo.de>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/akoenig/meeting/issues"
+    "url": "https://github.com/akoenig/kast/issues"
   },
-  "homepage": "https://github.com/akoenig/meeting",
-  "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-jshint": "^1.9.0",
-    "run-sequence": "^1.0.2"
-  },
+  "homepage": "https://github.com/akoenig/kast",
   "dependencies": {
+    "debug": "^2.1.0",
     "ip": "^0.3.2",
     "mandatory": "^1.0.0",
-    "verror": "^1.6.0",
-    "kast": "./lib/kast"
+    "verror": "^1.6.0"
   }
 }

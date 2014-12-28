@@ -1,5 +1,7 @@
-# meeting
+# kast
 
-## TODO
+An UDP multicast rpc framework.
 
-  * Implement _Meeting_ as an _EventEmitter_ in order to catch the error events
+## Author
+
+Copyright 2014, [André König](http://andrekoenig.info) (andre.koenig@posteo.de)
