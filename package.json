@@ -25,5 +25,10 @@
     "ip": "^0.3.2",
     "mandatory": "^1.0.0",
     "verror": "^1.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "run-sequence": "^1.0.2"
   }
 }
