@@ -4,8 +4,12 @@
   "description": "An udp multicast rpc framework.",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "gulp": "gulp"
   },
+  "pre-commit": [
+    "gulp"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:akoenig/kast.git"
@@ -29,6 +33,8 @@
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-jshint": "^1.9.0",
+    "jshint-stylish": "^1.0.0",
+    "pre-commit": "0.0.9",
     "run-sequence": "^1.0.2"
   }
 }

@@ -22,14 +22,15 @@ var sequence = require('run-sequence');
 var paths = {};
 
 paths.sources = [
-    path.join(__dirname, 'index.js'),
+    path.join(__dirname, '*.js'),
     path.join(__dirname, 'lib', '**', '*.js')
 ];
 
 gulp.task('lint', function () {
     return gulp.src(paths.sources)
         .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('default', function (callback) {
