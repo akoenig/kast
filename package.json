@@ -4,7 +4,7 @@
   "description": "An UDP multicast RPC framework.",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test",
+    "test": "gulp",
     "lint": "gulp lint",
     "specs": "gulp specs",
     "checkstyle": "gulp checkstyle"
