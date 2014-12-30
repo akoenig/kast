@@ -19,6 +19,8 @@ var kast = require('../');
 
 describe('The front-facing API', function suite () {
 
+    this.timeout(4000);
+
     it('should have a `listen` method with proper argument checks', function test (done) {
         var app = kast();
 
@@ -47,7 +49,7 @@ describe('The front-facing API', function suite () {
         }
 
         try {
-            app.command('foo');
+            app.command('/foo');
         } catch (e) {
             expect(e).not.to.be(undefined);
         }
@@ -87,14 +89,14 @@ describe('The front-facing API', function suite () {
         try {
             kast.broadcast({
                 port: 5000,
-                command: 'foo'
-            }, function onResponse () {});
+                command: '/foo'
+            }, function onResponse () {
+                done();
+            });
         } catch (e) {
             success = false;
         }
 
         expect(success).to.be(true);
-
-        done();
     });
 });
