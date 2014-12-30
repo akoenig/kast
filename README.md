@@ -66,7 +66,7 @@ The results of the hosts which have responded in a timely manner will be collect
 $ npm install --save kast
 ```
 
-### Creating a server instance
+### Basic usage
 
 ```javascript
 
@@ -74,6 +74,8 @@ var kast = require('kast');
 
 var server = kast();
 ```
+
+### Creating a server instance
 
 #### server.listen(port, [host], [callback])
 
@@ -86,6 +88,8 @@ This method will return an instance of `Socket` which exposes the following API:
 ##### socket.close(callback)
 
 Possibility for shutting the whole `kast` server down.
+
+### Registering commands
 
 #### server.command(name, handlerFn)
 
