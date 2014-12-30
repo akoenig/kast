@@ -17,5 +17,9 @@
     "latedef": "true",
     "quotmark": "single",
     "indent": 4,
-    "node": true
+    "node": true,
+    "globals": {
+        "describe": false,
+        "it": false
+    }
 }
