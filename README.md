@@ -1,6 +1,6 @@
 # kast [![Build Status](https://travis-ci.org/akoenig/kast.svg)](https://travis-ci.org/akoenig/kast)
 
-An UDP multicast RPC framework.
+An UDP multicast framework.
 
 ## Usage example
 
