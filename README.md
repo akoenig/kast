@@ -2,27 +2,11 @@
 
 An UDP multicast RPC framework.
 
-_Please note that this is a work in progress :)_
-
 ## Usage example
 
-Let's say we want to start two `kast` servers on `Host A` and on `Host B`:
+Let's say we want to start two `kast` servers, each of which provides a command to check if they are alive.
 
-### Server on `Host A`
-
-```javascript
-var kast = require('kast');
-
-var server = kast();
-
-server.command('/alive', function (req, res) {
-    res.send('Host A is alive!');
-});
-
-server.listen(5000);
-```
-
-### Server on `Host B`
+`Host A`:
 
 ```javascript
 var kast = require('kast');
@@ -30,13 +14,29 @@ var kast = require('kast');
 var server = kast();
 
 server.command('/alive', function (req, res) {
-    res.send('Host B is alive!');
+    res.send('Hey! Host A is alive!');
 });
 
 server.listen(5000);
 ```
 
-### Client
+`Host B`:
+
+```javascript
+var kast = require('kast');
+
+var server = kast();
+
+server.command('/alive', function (req, res) {
+    res.send('This is Host B speaking! How can I help you?');
+});
+
+server.listen(5000);
+```
+
+`Client`:
+
+A third host, the client, can now send a _broadcast request_ to all the hosts without knowing each individual ip address / host name.
 
 ```javascript
 var kast = require('kast');
@@ -49,18 +49,14 @@ kast.broadcast({
 });
 ```
 
-Output
+If everything went fine, the `results` argument will be an object with the following structure:
 
 ```javascript
 {
-    '10.0.0.1': 'Host A is alive!',
-    '10.0.0.9': 'Host B is alive!'
+    '10.0.0.1': 'Hey! Host A is alive!',
+    '10.0.0.23': 'This is Host B speaking! How can I help you?'
 }
 ```
-
-## Advanced example
-
-**TBD**
 
 ## Author
 
